@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+sounddevice
+soundfile
+numpy
+requests
+openai
