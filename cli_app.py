@@ -42,7 +42,7 @@ prompt = f"""You are a conversational partner to a user attempting to practice {
         """
 
 # openai settings
-text_model="gpt-4o-mini"  # pick your favorite text model
+text_model="gpt-4o-mini" 
 stt_model="gpt-4o-mini-transcribe"
 tts_model="gpt-4o-mini-tts"
 voice="alloy"
@@ -51,7 +51,7 @@ voice="alloy"
 rate = 24000
 channels = 1
 dtype = 'int16'
-frame_ms = 20  # 20ms frames are a good realtime chunk size
+frame_ms = 20 
 blocksize = int(rate * (frame_ms / 1000.0))  # 480 samples at 24kHz
 
 # function to record audio - runs until user hits 'enter' key
@@ -64,7 +64,7 @@ def record_audio_until_enter():
 
     def mic_callback(indata, frames, time_info, status):
         nonlocal total_frames
-        chunks.append(indata.copy())  # keep as numpy int16
+        chunks.append(indata.copy())
         total_frames += frames
 
     stream = sd.InputStream(
