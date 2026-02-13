@@ -169,14 +169,14 @@ async def start(payload: dict):
     env = dict(os.environ)
     env["OPENAI_API_KEY"] = api_key
 
-    cmd = ["python3", "cli_app.py", "--language", language, "--level", level]
+    cmd = ["python", "cli_app.py", "--language", language, "--level", level]
     if in_device != "":
         cmd += ["--in", in_device]
     if out_device != "":
         cmd += ["--out", out_device]
 
     PROC = subprocess.Popen(
-    ["python3", "cli_app.py", "--language", language, "--level", level, "--in", str(in_device), "--out", str(out_device)],
+    ["python", "cli_app.py", "--language", language, "--level", level, "--in", str(in_device), "--out", str(out_device)],
     env=env
 )
     return {"status": f"Running (language={language}, level={level}, in={in_device}, out={out_device})"}
