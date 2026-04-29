@@ -14,7 +14,7 @@ HTML = """
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Nathaniel's Language Buddy</title>
+  <title>Language Buddy</title>
   <style>
     body { font-family: system-ui; max-width: 720px; margin: 40px auto; padding: 0 16px; background: #f78bab; color: #ffffff;}
     .row { margin: 12px 0; }
@@ -24,8 +24,7 @@ HTML = """
   </style>
 </head>
 <body>
-  <h1>Happy Valentine's Day!!!</h1>
-  <p>Please enjoy your little gift <3</p>
+
 
   <div class="row">
   <label>OpenAI API Key:</label><br/>
